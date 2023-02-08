@@ -9,8 +9,8 @@ __entry:
 	jmp r0
 	nop
 	.align 4
-	@@main_func:     .dw _ss_main
-	@@stack_pointer: .dw EntryPoint
+	@@main_func:     .dd _ss_main
+	@@stack_pointer: .dd EntryPoint
 
 	.importobj BUILD_DIR + "/combined.a"
 	.importobj LIBGCC_PATH
